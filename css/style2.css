@@ -1,0 +1,13 @@
+.face_photo {
+	height:120px;
+}
+
+.item_photo {
+	height:120px;
+}
+
+@media print{
+.noPrint{
+	display:none;
+} 
+}

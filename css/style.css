@@ -1,0 +1,342 @@
+@charset "utf-8";
+
+* {
+	margin:0;
+	padding:0;
+}
+
+
+/* body */
+body {
+	background:#000;
+	font-family: "Noto Serif JP", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 100;
+	font-style: normal;
+  /*	font-family:Verdana, "ＭＳ Ｐゴシック", sans-serif;*/
+	font-size:100%;
+}
+footer {
+	margin-top: 20px;
+	color: #fff;
+	background-color: #344e16;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+small{
+	margin-top: 20px;
+	font-size: 0.75em;
+	font-style: normal;
+	text-align: center;
+	display: block;
+}
+footer .main-copy{
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1;
+	letter-spacing: .2em;
+}
+  
+footer .sub-copy{
+	font-size: 15px;
+	text-align: center;
+}
+
+.wrap{
+	background:linear-gradient(#000 0%, #FFF 100%);
+}
+.block{
+	margin: 10px;
+/*	background:#fff0f0;*/
+	background:#FFF;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.item_cennter{
+	padding: 10px;
+	text-align: center;
+}
+.list{
+	margin: auto;
+	list-style: none;
+	width: 100%;
+	text-align: center;
+}
+.list li {
+	margin: 10px;
+	text-align: center;
+	border: 2px solid #777777;
+	width: 120px;
+	height: 30px;
+	font-size:120%;
+	display: inline-block;
+ }
+p{
+	font-size:110%;
+	margin-top:5px;
+	margin-bottom:5px;
+/*	font-family: "Noto Sans JP", sans-serif;*/
+/*	font-weight: bold;*/
+}
+
+hr{
+	height:2px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+h2{
+	font-size:300%;
+	margin-bottom:10px;
+	position: relative;
+	text-align:center;
+	color:#73ad31;
+/*	background-image: linear-gradient(135deg, #A80000 0%, #73ad31 100%);*/
+}
+h2:before, h2:after{
+	content: url(../img/basketball_30.png);	
+}
+h3{
+	text-align:center;
+	font-size:200%;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+h4{
+	font-size:110%;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+h4:before{
+	content: "★";	
+	color:#d3d300;
+}
+ul{
+	width:100px;
+	margin:auto;
+}
+.double{
+	width:100%;
+	text-align:center;
+}
+
+  /* 二重線付き見出し２ */
+.double{
+	width:100%;
+	text-align:center;
+}
+.double h2{
+	position:relative;
+	display:inline-block;
+}
+.double h2:before, .double h2:after{
+	content:url(../img/basketball_30.png);
+	display:block;
+	width:200px;
+	height:4px;
+	border-top:3px solid rgb(168, 0, 0);
+	border-bottom:3px solid #73ad31;
+	position:absolute;
+	top:50%;
+	margin-top:-2px;
+}
+.double h2:before{left:-224px;}
+.double h2:after{right:-224px;}
+
+table{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	border-collapse:separate;
+	border-spacing: 0;
+}
+table th:first-child{
+	border-radius: 5px 0 0 0;
+ }
+ table th:last-child{
+	border-radius: 0 5px 0 0;
+	border-right: 1px solid #73ad31;
+ }
+ table th{
+	text-align: center;
+	color:white;
+	background: linear-gradient(#d1f0ae,#5b9b11);
+	border-left: 1px solid #73ad31;
+	border-top: 1px solid #73ad31;
+	border-bottom: 1px solid #73ad31;
+	box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+/*	width: 25%;*/
+	padding: 10px 0;
+ }
+ table td{
+	text-align: center;
+	border-left: 1px solid #a8b7c5;
+	border-bottom: 1px solid #a8b7c5;
+	border-top:none;
+	box-shadow: 0px -3px 5px 1px #eee inset;
+/*	width: 20%;*/
+	padding: 10px 0;
+ }
+ table td:last-child{
+	border-right: 1px solid #a8b7c5;
+ }
+ table tr:last-child td:first-child {
+	border-radius: 0 0 0 5px;
+ }
+ table tr:last-child td:last-child {
+	border-radius: 0 0 5px 0;
+ }
+
+/* kv */
+.kv{
+	height: 100vh;
+	display: flex;
+/*	justify-content: center;
+	align-items: center;*/
+}
+  
+/* video */
+.video{
+	width: 100%;
+	height: 100vh;
+	background: url(../img/koitann_anime.jpg) no-repeat center cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -1;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.video::after{
+	content: '';
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: .3;
+}
+
+.video video{
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+/* humberger menu */
+  .nav_toggle {
+	margin: 12px;
+	display: block;
+	position: fixed;
+/*	position: relative;*/
+	width: 1.5rem;
+	height: 1.5rem;
+  }
+  .nav_toggle i {
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #FFF;
+	position: absolute;
+	transition: transform .5s, opacity .5s;
+	border: solid 2px #000;
+  }
+  .nav_toggle i:nth-child(1) {
+	top: 0;
+  }
+  .nav_toggle i:nth-child(2) {
+	top: 0;
+	bottom: 0;
+	margin: auto;
+  }
+  .nav_toggle i:nth-child(3) {
+	bottom: 0;
+  }
+  .nav_toggle.show i:nth-child(1) {
+	transform: translateY(9px) rotate(-45deg);
+  }
+  .nav_toggle.show i:nth-child(2) {
+	opacity: 0;
+  }
+  .nav_toggle.show i:nth-child(3) {
+	transform: translateY(-9px) rotate(45deg);
+  }
+  .nav {
+	position: fixed;
+	top: 3rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0rem;
+	width: 30%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s, visibility .5s;
+	background-color: #000;
+	border: solid 3px #F00;
+	border-radius: 10px;
+  }
+  .nav.show {
+	opacity: 1;
+	visibility: visible;
+  }
+
+  .nav_menu_ul {
+	width:100%;
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  .nav_menu_li:hover{
+	background-color: #c9c9c9; 
+	border-radius: 5px;
+  }
+  .nav_menu_li a{
+	font-family: "Noto Sans JP", sans-serif;
+	font-size:200%;
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+	line-height: 40px;
+	padding: 0px 10px;
+  }
+  .nav_menu_li a:hover{
+	color: #000;
+  }
+
+ /*
+@media screen and (min-width: 768px) {
+	/ kv /
+	.kv{
+	  min-width: 960px;
+	}
+  
+	.kv .main-copy{
+	  font-size: 60px;
+	}
+  
+	.kv .sub-copy{
+	  font-size: 30px;
+	}
+ 
+	/ video /
+	.video{
+	  min-width: 960px;
+	}
+}
+*/
